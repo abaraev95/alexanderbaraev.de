@@ -1,0 +1,25 @@
+.footer {
+    height: 150px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+        color: #8491A0;
+        text-decoration: none;
+        transition: all 225ms ease-in-out;
+        font-size: 14px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+    }
+
+    img {
+        height: 40px;
+        width: 40px;
+        margin-left: 40px;
+    }
+}

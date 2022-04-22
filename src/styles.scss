@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'animate.css';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+.stop-scrolling {
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden
+}
+
+.padding {
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+.headline {
+    margin-top: 80px;
+    margin-bottom: 120px;
+    position: relative;
+}
+
+.headline-container {
+    position: relative;
+    
+}
+
+.headline-underline {
+    position: absolute;
+    bottom: 100px;
+    left:calc(50% - 50px);
+    height: 3px;
+    width: 100px;
+    background-color: #FA2759;
+}
+
+.d-none {
+    display: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

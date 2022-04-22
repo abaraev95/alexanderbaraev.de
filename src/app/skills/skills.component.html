@@ -1,0 +1,13 @@
+<div id="skills" class="skills-container">
+    <div class="headline-container">
+        <h1 class="headline" data-aos="fade-right">MY SKILLS</h1>
+        <div class="headline-underline" data-aos="zoom-in" data-aos-delay="200"></div>
+    </div>
+
+    <div class="card-container padding">
+        <div class="skill-card" data-aos="zoom-in-up" *ngFor="let skill of skills">
+            {{ skill.title }}
+            <div class="skill-card-img"><img [src]="skill.img"></div>
+        </div>
+    </div>
+</div>

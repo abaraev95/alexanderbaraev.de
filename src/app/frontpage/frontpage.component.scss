@@ -1,0 +1,171 @@
+.frontpage {
+    height: 100vh;
+    // background-image: url(/alexanderbaraev.de/assets/img/bg1.jpg);
+    background-image: url(/assets/img/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    animation: animatedBackground 15s linear alternate infinite;
+}
+
+.welcome-text {
+    position: absolute;
+    font-size: 40px;
+    height: 120px;
+    top: 200px;
+    left: 12%;
+    border-left: 4px solid #fa2759;
+    padding-left: 8px;
+    animation: fadeIn 1s ease-in;
+}
+
+.contact-btn {
+    height: 80px;
+    width: 300px;
+    position: absolute;
+    left: 12%;
+    bottom: 200px;
+    border: 2px solid rgb(45, 252, 216);
+    box-sizing: border-box;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2dfcd8;
+    text-decoration: none;
+    transition: all 0.225s ease-in-out;
+    font-size: 18px;
+
+    &:hover {
+        background-color: rgba(45, 252, 216, 0.2);
+    }
+}
+
+.developer {
+    display: flex;
+    flex-direction: row;
+    padding-top: 16px;
+}
+
+.typing-blink {
+    width: 6px;
+    height: 50px;
+    background-color: #fa2759;
+    animation: blink 0.6s;
+    animation-iteration-count: 10;
+    opacity: 0;
+}
+
+#quotes2 {
+    color: #fa2759;
+}
+
+.profile-picture-container {
+    position: absolute;
+    top: 150px;
+    right: 12%;
+
+    img {
+        height: 350px;
+        width: 350px;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+}
+
+.arrows {
+    width: 60px;
+    height: 72px;
+    position: absolute;
+    left: calc(50% - 30px);
+    bottom: 40px;
+    cursor: pointer;
+}
+
+.arrows path {
+    stroke: #fa2759;
+    fill: transparent;
+    stroke-width: 1px;
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+}
+
+.arrows path.a1 {
+    animation-delay: -1s;
+    -webkit-animation-delay: -1s;
+}
+
+.arrows path.a2 {
+    animation-delay: -0.5s;
+    -webkit-animation-delay: -0.5s;
+}
+
+.arrows path.a3 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes arrow {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animatedBackground {
+    0% {
+        background-size: 100% 100%;
+    }
+    100% {
+        background-size: 110% 110%;
+    }
+}

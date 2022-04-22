@@ -1,0 +1,152 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+
+    img {
+        height: 50px;
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-item {
+    margin-left: 32px;
+    overflow: hidden;
+    font-size: 16px;
+
+    &:hover .underline-effect {
+        transform: translateX(0);
+    }
+
+    &:hover .nav-link {
+        color: #fa2759;
+    }
+}
+
+.nav-link {
+    color: white;
+    padding: 0;
+    transition: all 225ms ease-in-out;
+    text-decoration: none;
+}
+
+.active {
+    color: #fa2759;
+}
+
+.underline-effect {
+    width: inherit;
+    height: 2px;
+    background-color: #fa2759;
+    transition: all 225ms ease-in-out;
+    transform: translateX(-105%);
+}
+
+.mobile-menu {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 8%;
+    top: calc(50% - 20px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-line {
+    height: 3px;
+    width: 40px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-line::before,
+.menu-line::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 40px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-line::before {
+    transform: translateY(-8px);
+}
+
+.menu-line::after {
+    transform: translateY(8px);
+}
+
+.open .menu-line {
+    transform: translateX(-40px);
+    background-color: transparent;
+}
+
+.open .menu-line::before {
+    transform: rotate(45deg) translate(25px, -25px);
+}
+
+.open .menu-line::after {
+    transform: rotate(-45deg) translate(25px, 25px);
+}
+
+.extended {
+    height: 100vh !important;
+    transition: all 0.5s ease-in-out;
+}
+
+ul {
+    margin-block-start: 0px;
+    padding-inline-start: 0px;
+}
+
+@media (max-width: 650px) {
+    .mobile-menu {
+        display: flex;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 0;
+        overflow: hidden;
+        background-color: black;
+        z-index: 99;
+        list-style-type: none;
+        padding-top: 32px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav-item {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+}

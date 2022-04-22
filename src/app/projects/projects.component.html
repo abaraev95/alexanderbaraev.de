@@ -1,0 +1,27 @@
+<div id="projects" class="projects-container">
+    <div class="headline-container">
+        <h1 class="headline" data-aos="fade-right">MY WORK</h1>
+        <div class="headline-underline" data-aos="zoom-in" data-aos-delay="200"></div>
+    </div>
+    <div class="selector-bar">
+        <div [class.selected]="projectSelector == 1" (click)="projectSelected(1)">All</div>
+        <div [class.selected]="projectSelector == 2" (click)="projectSelected(2)">Angular</div>
+        <div [class.selected]="projectSelector == 3" (click)="projectSelected(3)">JavaScript</div>
+        <div [class.selected]="projectSelector == 4" (click)="projectSelected(4)">Python</div>
+    </div>
+
+    <div class="card-container">
+        <div class="project-card" [class.changeAnimation]="filterChanged" data-aos="flip-up" data-aos-duration="750"
+            *ngFor="let project of projects">
+            <ng-container *ngIf="filterProjects(project)">
+                <img [src]="project.projectImage">
+                <div>
+                    <span>{{ project.projectName }}</span>
+                    <span>{{ project.projectDescription }}</span>
+                    <button>Check this out</button>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+</div>

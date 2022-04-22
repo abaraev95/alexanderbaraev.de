@@ -1,0 +1,33 @@
+<header class="padding">
+    <a class="logo-container" href="#">
+        <img class="" src="assets/img/output-onlinepngtools.png">
+    </a>
+
+    <div>
+        <div class="mobile-menu" (click)="openMenu()" [class.open]="opened">
+            <div class="menu-line"></div>
+        </div>
+        <ul class="navbar" [class.extended]="opened">
+            <li class="nav-item">
+                <a class="nav-link" [class.active]="highlightedSection == 1" href="#home" (click)="closeMenu()">HOME</a>
+                <div class="underline-effect"></div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [class.active]="highlightedSection == 2" href="#skills" (click)="closeMenu()">SKILLS</a>
+                <div class="underline-effect"></div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [class.active]="highlightedSection == 3" href="#projects" (click)="closeMenu()">PORTFOLIO</a>
+                <div class="underline-effect"></div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [class.active]="highlightedSection == 4" href="#about" (click)="closeMenu()">ABOUT</a>
+                <div class="underline-effect"></div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [class.active]="highlightedSection == 5" href="#contact" (click)="closeMenu()">CONTACT</a>
+                <div class="underline-effect"></div>
+            </li>
+        </ul>
+    </div>
+</header>
